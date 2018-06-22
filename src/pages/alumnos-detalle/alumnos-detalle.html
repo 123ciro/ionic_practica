@@ -1,0 +1,74 @@
+<!--
+  Generated template for the AlumnosDetallePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalle del Alumno</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<h3> Detalle del Alumno</h3>
+
+
+
+    <h2> Especiliad:  <h4> {{alumno.especialidad}}</h4>   </h2>
+
+<!-- <table>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Edad</th>
+    <th>Profesion</th>
+    <th>Telefono</th>
+    <th>Fecha de Nacimiento</th>
+  </tr>
+  <tr>
+    <th>{{alumno.nombre}}</th>
+    <th>{{alumno.apellido}}</th>
+    <th>{{alumno.edad}}</th>
+    <th>{{alumno.profesion}}</th>
+    <th>{{alumno.telefono}}</th>
+    <th>{{alumno.fecha_nacimiento}}</th>
+    
+  </tr>
+
+
+</table> -->
+
+
+<table class="table table-striped">
+  <thead>
+
+    <tr>
+      
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Fecha de Nac.</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Profesion</th>
+      <th scope="col">Telefono</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td>{{alumno.nombre}}</td>
+      <td>{{alumno.apellido}}</td>
+      <td>{{alumno.fecha_nacimiento}}</td>
+      <td>{{alumno.edad}}</td>
+      <td>{{alumno.profesion}}</td>
+      <td>{{alumno.telefono}}</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+</ion-content>

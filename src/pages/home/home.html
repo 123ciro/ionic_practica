@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        <ion-searchbar (ionInput)="getAlumno($event)" ></ion-searchbar>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+<ion-content padding>
+
+
+<ion-list >
+
+  <h2>Lista de Alumnos Matriculados</h2>
+  <button ion-item *ngFor="let alumno of alumnos"  (click)="openDetalle(alumno)" >
+
+ <ion-avatar item-start>
+   <img src="{{alumno.avatar}}">
+ </ion-avatar>
+
+  
+    <h2 >  {{ alumno.nombre }} </h2>
+    
+    
+    <ion-card-content>
+        {{ alumno.email }}
+      </ion-card-content>
+    
+    <button ion-button clear item-end>Ver</button>
+    
+  </button> 
+</ion-list>
+
+
+
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Cargando...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+
+
+</ion-content>
+
+<ion-footer style="text-align: center">
+    <ion-toolbar >
+      <ion-title>Author: Ciro Ferrario</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+
+
